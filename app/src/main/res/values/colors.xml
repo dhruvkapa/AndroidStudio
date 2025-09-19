@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- basics -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- backgrounds -->
+    <color name="bg">#DDE1E8</color>        <!-- fallback page bg if image fails -->
+    <color name="surface">#FFFFFF</color>   <!-- input fill -->
+
+    <!-- text & icon colors -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#4B5563</color>
+    <color name="hint">#4B5563</color>
+    <color name="icon_tint">#4B5563</color>
+
+    <!-- inputs -->
+    <color name="input_stroke">#D8DDE8</color>
+
+    <!-- buttons (choose ONE set; delete the others) -->
+    <!-- Deep Green -->
+    <color name="btn">#2E7D32</color>
+    <color name="on_btn">#FFFFFF</color>
+    <!-- Charcoal
+    <color name="btn">#3B4151</color>
+    <color name="on_btn">#FFFFFF</color> -->
+</resources>

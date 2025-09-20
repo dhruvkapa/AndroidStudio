@@ -12,6 +12,11 @@ import androidx.core.view.WindowInsetsCompat;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.MotionEvent;
+import android.text.method.PasswordTransformationMethod;
+import android.text.method.HideReturnsTransformationMethod;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 if(rememberMeBox.isChecked()){          //check if remember me box is checked
 
                     //saves username to sharedpreference
+
                     SharedPreferences.Editor editor = sharedPrefer.edit();
                     editor.putString("username", username);
-                    editor.apply();         //saves data
+                    editor.apply();         //saves datam
                 }
 
                 //direct to welcome page
@@ -77,8 +83,31 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //Show Password Logic
+        // Logic will follow something like  visibilityLogo > onClick > Make password visible
 
+        passwordInput.setOnTouchListener((v, event) -> {
+            final int DRAWABLE_RIGHT = 2; // Index for drawableEnd
 
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // Check if the touch is within the bounds of the drawableEnd
+                if (event.getRawX() >= (passwordInput.getRight() - passwordInput.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width() - passwordInput.getPaddingEnd())) {
 
+                    // Toggle password visibility
+                    if (passwordInput.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())) {
+                        passwordInput.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                        passwordInput.setCompoundDrawablesWithIntrinsicBounds(R.drawable.outline_lock_24, 0, R.drawable.baseline_visibility_24, 0);
+                    } else {
+                        passwordInput.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                        passwordInput.setCompoundDrawablesWithIntrinsicBounds(R.drawable.outline_lock_24, 0, R.drawable.baseline_visibility_24, 0);
+                    }
+
+                    // Move the cursor to the end of the text
+                    passwordInput.setSelection(passwordInput.getText().length());
+                    return true;
+                }
+            }
+            return false;
+        });
     }
 }

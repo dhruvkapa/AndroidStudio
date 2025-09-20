@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <!--Background Image -->
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:importantForAccessibility="no"/>
+
+    <!-- Welcome Title centered near top -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267" />
+
+    <EditText
+        android:id="@+id/newUsername"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:minHeight="48dp"
+        android:autofillHints="username"
+        android:background="@drawable/bg_input"
+        android:drawableStart="@drawable/outline_person_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/icon_tint"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:paddingStart="14dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="14dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/hint"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintVertical_bias="0.445"
+        android:layout_marginTop="24dp"/>
+
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:autofillHints="password"
+        android:background="@drawable/bg_input"
+        android:drawableStart="@drawable/outline_lock_24"
+        android:drawableEnd="@drawable/baseline_visibility_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/icon_tint"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="14dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="14dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/hint"
+        app:layout_constraintTop_toBottomOf="@id/newUsername"
+        app:layout_constraintStart_toStartOf="@id/newUsername"
+        app:layout_constraintEnd_toEndOf="@id/newUsername"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintVertical_bias="0.58"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/passwordConfirm"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:autofillHints="password"
+        android:background="@drawable/bg_input"
+        android:drawableStart="@drawable/outline_lock_24"
+        android:drawableEnd="@drawable/baseline_visibility_24"
+        android:drawableTint="@color/icon_tint"
+        android:drawablePadding="8dp"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:paddingStart="14dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="14dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/hint"
+        app:layout_constraintTop_toBottomOf="@id/newPassword"
+        app:layout_constraintStart_toStartOf="@id/newUsername"
+        app:layout_constraintEnd_toEndOf="@id/newUsername"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintVertical_bias="0.58"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvRegMsg"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirm"
+        app:layout_constraintStart_toStartOf="@id/newUsername"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
+        android:text="@string/register"
+        android:backgroundTint="@color/btn"
+        android:textColor="@color/on_btn"
+        app:layout_constraintTop_toBottomOf="@id/tvRegMsg"
+        app:layout_constraintStart_toStartOf="@id/newUsername"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
+        android:text="@string/cancel"
+        android:backgroundTint="@color/btn"
+        android:textColor="@color/on_btn"
+        app:layout_constraintTop_toTopOf="@id/btnCreate"
+        app:layout_constraintEnd_toEndOf="@id/newUsername"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

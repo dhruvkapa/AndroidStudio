@@ -1,4 +1,4 @@
-package com.example.lab1;
+package com.example.logindemo;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -8,10 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.Toast;
+
 
 public class WelcomeScreen extends AppCompatActivity {
 
-    //private TextView welcomeMessageTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +25,16 @@ public class WelcomeScreen extends AppCompatActivity {
             return insets;
         });
 
-        TextView welcomeMessageTextView = findViewById(R.id.welcome_message_view);
+        TextView welcomeMessageTextView = findViewById(R.id.welcome_message_view);      //find text view that display welcome message
 
-        Intent intent = getIntent();
+        Intent intent = getIntent();    //intent to start activity
 
-        String username = intent.getStringExtra("username");
+        String username = intent.getStringExtra("username");        //get username passed from login page
+
 
         if(username != null && !username.isEmpty()){
-            String welcomeMessage = getString(R.string.welcome_message, username);
-            welcomeMessageTextView.setText(welcomeMessage);
+            String welcomeMessage = String.format(getString(R.string.welcome_message), username);       //insert username in the welcome message to personalize
+            welcomeMessageTextView.setText(welcomeMessage);         //set message to textview
         }
 
 

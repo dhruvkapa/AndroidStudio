@@ -9,6 +9,23 @@
     android:backgroundTint="#559E0D"
     tools:context=".WelcomeScreen">
 
+    <!--Background Image -->
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:importantForAccessibility="no"/>
+
+    <!--Big Welcome Message -->
     <TextView
         android:id="@+id/welcome_title"
         android:layout_width="wrap_content"
@@ -16,7 +33,7 @@
         android:layout_marginTop="250dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/welcome_to_world"
-        android:textColor="#FFFFFF"
+        android:textColor="#0D0C0C"
         android:textSize="28sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +41,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <!--Encouragement message -->
     <TextView
         android:id="@+id/welcome_subtitle"
         android:layout_width="wrap_content"
@@ -31,13 +49,13 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/akaya_kanadaka"
         android:text="@string/welcome_subtitle"
-        android:textColor="#FFFFFF"
+        android:textColor="#070707"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome_message_view" />
 
-
+    <!--Hello with username from login page -->
     <TextView
         android:id="@+id/welcome_message_view"
         android:layout_width="wrap_content"
@@ -45,7 +63,7 @@
         android:layout_marginTop="50dp"
         android:fontFamily="@font/alkalami"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:textColor="#070707"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,5 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Hello, " />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

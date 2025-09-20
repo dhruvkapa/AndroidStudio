@@ -3,14 +3,14 @@
     <string name="cancel">Cancel</string>
     <string name="usernameLabel">Username:</string>
     <string name="passwordLabel">Password:</string>
-    <string name="welcome_message3">WELCOME BACK!!</string>
+    <string name="welcome_message">PLEASE LOG IN!!</string>
     <string name="welcome_message2">We\'re so excited to see you again!!</string>
     <string name="cancel_text">Cancel</string>
     <string name="remember_me">Remember Me</string>
     <string name="log_in">Log In</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="welcome_message">Welcome Back, %1$s!!</string>
-    <string name="welcome_to_world">WELCOME TO OUR WORLD</string>
-    <string name="welcome_subtitle">We are so excited to have you in our community!</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="register">Register</string>
 </resources>

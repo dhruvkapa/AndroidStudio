@@ -30,7 +30,7 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_message"
+        android:text="@string/welcome_message3"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
@@ -165,7 +165,8 @@
         android:textStyle="bold"
         android:textColor="@color/text_secondary"
         app:layout_constraintStart_toStartOf="@id/password"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@id/password"
+        />
 
     <!-- Login button (green tint from @color/btn / white text @color/on_btn)-->
     <Button

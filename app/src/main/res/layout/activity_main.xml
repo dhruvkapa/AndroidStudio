@@ -15,6 +15,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@null"
+        android:importantForAccessibility="no"
         android:scaleType="centerCrop"
         android:src="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,15 +23,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:importantForAccessibility="no"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <!-- Welcome Title centered near top -->
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_message3"
+        android:text="@string/welcome_message1"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
@@ -182,7 +182,7 @@
         app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.683" />
 
     <!-- Cancel button (styled same as login)-->
     <Button
@@ -198,14 +198,35 @@
         app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.683" />
+
+    <!--Link to registration screen -->
+    <TextView
+        android:id="@+id/linkRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:paddingTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:minHeight="48dp"
+        android:text="@string/register_message"
+        android:textColor="@color/btn"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button" />
+
 
     <!-- Message area for validation/auth feedback (set text/color from Java)-->
     <TextView
         android:id="@+id/tvMessage"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:text=""
         android:textColor="@color/text_secondary"
         app:layout_constraintStart_toStartOf="@id/password"

@@ -10,11 +10,15 @@
     tools:context=".WelcomeScreen">
 
     <!--Background Image -->
+
+    <!--Big Welcome Message -->
+
     <ImageView
         android:id="@+id/bg"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@null"
+        android:importantForAccessibility="no"
         android:scaleType="centerCrop"
         android:src="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,10 +26,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:importantForAccessibility="no"/>
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!--Big Welcome Message -->
     <TextView
         android:id="@+id/welcome_title"
         android:layout_width="wrap_content"
@@ -72,6 +74,20 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Hello, " />
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="@color/btn"
+        android:text="Log out"
+        android:textColor="@color/on_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_subtitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
